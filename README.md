@@ -53,3 +53,4 @@ FOHKASU is a local tool. Your profile, your "murdered days," and your confession
 🤝 Contributing
 If you have ideas for sharper psychological knives, feel free to open a Pull Request. We are always looking for new ways to break the addiction loop.
 "You are trading your life for pixels that do not know your name."
+
