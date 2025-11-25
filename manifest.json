@@ -1,12 +1,13 @@
 {
   "manifest_version": 3,
   "name": "FOHKASU // 聚焦",
-  "version": "8.0",
-  "description": "Cognitive Firewall. The Final Update.",
+  "version": "9.0",
+  "description": "Cognitive Firewall. The Warden is watching.",
   "permissions": [
     "storage",
     "activeTab",
-    "scripting"
+    "scripting",
+    "alarms"
   ],
   "host_permissions": [
     "<all_urls>"
