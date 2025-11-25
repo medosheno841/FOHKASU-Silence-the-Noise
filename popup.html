@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FOHKASU</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap');
+
+        :root {
+            /* Emotional Palette */
+            --bg-body: #020617;
+            --bg-card: #0F172A;
+            --bg-input: #1E293B;
+            --primary: #2DD4BF; /* Cyan - Hope/Focus */
+            --primary-dark: #14998A;
+            --text-main: #F8FAFC;
+            --text-muted: #94A3B8;
+            --danger: #F43F5E; /* Red - Danger/Guilt */
+            --success: #10B981; /* Green - Safety */
+            --border: #334155;
+            --shadow: 0 4px 0 rgba(0,0,0,0.3);
+        }
+
+        * { box-sizing: border-box; user-select: none; }
+
+        body {
+            width: 380px; min-height: 600px;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            font-family: 'Nunito', sans-serif;
+            margin: 0; padding: 24px;
+            display: flex; flex-direction: column;
+            align-items: center;
+        }
+
+        /* --- HEADER --- */
+        .header {
+            display: flex; justify-content: space-between; align-items: center;
+            width: 100%; margin-bottom: 24px;
+        }
+        .brand { 
+            font-weight: 900; font-size: 1.4rem; letter-spacing: -0.5px; 
+            color: white; display: flex; align-items: center; gap: 8px;
+        }
+        .brand span { color: var(--primary); }
+        
+        .icon-btn {
+            background: transparent; border: none; color: var(--text-muted);
+            cursor: pointer; font-size: 1.2rem; transition: 0.2s;
+            width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+            border-radius: 12px;
+        }
+        .icon-btn:hover { background: var(--bg-input); color: white; }
+
+        /* --- BACK BUTTON (Fixed) --- */
+        .back-header {
+            width: 100%; display: flex; align-items: center; gap: 10px; margin-bottom: 20px;
+        }
+        .back-btn {
+            background: transparent; border: none; color: var(--text-muted);
+            font-size: 1.1rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 5px;
+        }
+        .back-btn:hover { color: white; }
+
+        /* --- CARDS --- */
+        .card {
+            width: 100%; background-color: var(--bg-card); border-radius: 16px;
+            padding: 20px; margin-bottom: 20px; border: 2px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+        
+        .card-header {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 16px; padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        .card-title { font-weight: 800; font-size: 1rem; color: white; margin: 0; }
+
+        /* --- GRAVEYARD GRID --- */
+        .graveyard-grid {
+            display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px;
+        }
+        .day-cell {
+            aspect-ratio: 1; border-radius: 8px; background: var(--bg-input);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.85rem; font-weight: 700; color: var(--text-muted);
+        }
+        .day-cell.skull { 
+            background: rgba(244, 63, 94, 0.1); color: var(--danger); 
+            border: 1px solid rgba(244, 63, 94, 0.3);
+        }
+        .day-cell.shield { 
+            background: rgba(34, 197, 94, 0.1); color: var(--success); 
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+
+        /* --- STATUS INDICATOR --- */
+        .status-banner {
+            width: 100%; padding: 16px; border-radius: 16px;
+            background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+            border: 2px solid var(--border); margin-bottom: 24px;
+            display: flex; align-items: center; justify-content: space-between;
+            box-shadow: var(--shadow); cursor: pointer; transition: 0.2s;
+        }
+        .status-banner:active { transform: translateY(2px); box-shadow: none; }
+        
+        .status-content { display: flex; align-items: center; gap: 12px; }
+        .status-icon { 
+            width: 40px; height: 40px; border-radius: 10px; background: var(--bg-input);
+            display: flex; align-items: center; justify-content: center; font-size: 1.2rem;
+        }
+        .status-info h3 { margin: 0; font-size: 0.95rem; font-weight: 800; }
+        .status-info p { margin: 0; font-size: 0.75rem; color: var(--text-muted); }
+        
+        .status-pill {
+            font-size: 0.7rem; font-weight: 800; text-transform: uppercase;
+            padding: 4px 8px; border-radius: 6px; background: rgba(34, 197, 94, 0.1); color: var(--success);
+        }
+        .paused .status-pill { background: rgba(244, 63, 94, 0.1); color: var(--danger); }
+
+        /* --- BUTTONS --- */
+        .btn {
+            width: 100%; padding: 14px; border: none; border-radius: 12px;
+            font-weight: 800; font-size: 1rem; cursor: pointer;
+            box-shadow: 0 4px 0 rgba(0,0,0,0.2); transition: 0.1s;
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+        }
+        .btn:active { transform: translateY(4px); box-shadow: none; }
+        
+        .btn-primary { background: var(--primary); color: #0F172A; box-shadow: 0 4px 0 var(--primary-dark); }
+        .btn-danger { background: transparent; border: 2px solid var(--danger); color: var(--danger); box-shadow: none; }
+        .btn-danger:hover { background: var(--danger); color: white; }
+        
+        /* Selection Buttons (Gender/Kids) */
+        .select-btn {
+            flex: 1; padding: 12px; background: var(--bg-input); border: 2px solid var(--border);
+            border-radius: 12px; color: var(--text-muted); font-weight: 700; cursor: pointer;
+            font-size: 0.9rem; transition: 0.2s;
+        }
+        .select-btn:hover { border-color: var(--text-muted); }
+        .select-btn.selected { 
+            background: var(--primary); color: #0F172A; border-color: var(--primary); 
+            box-shadow: 0 4px 0 var(--primary-dark);
+        }
+
+        .input-field {
+            width: 100%; padding: 16px; background: var(--bg-input); border: 2px solid var(--border);
+            border-radius: 12px; color: white; font-weight: 700; font-family: 'Nunito', sans-serif;
+            outline: none; text-align: center; margin-bottom: 15px; font-size: 1.1rem;
+        }
+        .input-field:focus { border-color: var(--primary); }
+
+        /* --- CONFESSION MODAL --- */
+        #confession-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(2, 6, 23, 0.95); z-index: 100;
+            display: none; flex-direction: column; padding: 30px;
+            align-items: center; justify-content: center; text-align: center;
+            backdrop-filter: blur(5px);
+        }
+        .confession-box {
+            width: 100%; height: 140px; background: rgba(255,255,255,0.05);
+            border: 2px solid var(--danger); border-radius: 12px; padding: 16px;
+            color: white; font-family: 'Nunito', sans-serif; margin: 20px 0;
+            resize: none; outline: none; font-size: 1rem;
+        }
+
+        /* Helpers */
+        .hidden { display: none !important; }
+        .fade-in { animation: fadeIn 0.3s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="header" id="mainHeader">
+        <div class="brand">FOHKASU<span>.</span></div>
+        <button class="icon-btn" id="btnSettings">⚙️</button>
+    </div>
+
+    <!-- BACK HEADER (For Settings) -->
+    <div class="back-header hidden" id="settingsHeader">
+        <button class="back-btn" id="btnBack">← Back</button>
+    </div>
+
+    <!-- CONFESSION OVERLAY -->
+    <div id="confession-overlay">
+        <h2 style="color:var(--danger); margin:0; font-size:1.8rem;">GIVING UP?</h2>
+        <p style="color:var(--text-muted); margin-top:10px;">Explain why you are choosing weakness.</p>
+        <textarea id="confessionInput" class="confession-box" placeholder="I am failing because... (Min 50 chars)"></textarea>
+        <button class="btn btn-primary" id="btnStayStrong" style="margin-bottom:12px;">I WILL STAY STRONG</button>
+        <button class="btn btn-danger" id="btnAdmitDefeat" style="opacity:0.5; cursor:not-allowed;">I ADMIT DEFEAT</button>
+    </div>
+
+    <!-- VIEW: SETUP -->
+    <div id="view-setup" class="fade-in">
+        <div class="card" style="text-align: center; padding: 30px 20px;">
+            <div style="font-size: 3rem; margin-bottom: 10px;">🛡️</div>
+            <h2 style="margin: 0 0 10px 0; color: white;">Identity Calibration</h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;">Who are you when no one is watching?</p>
+            
+            <div id="setup-step-1">
+                <input type="text" class="input-field" id="inputName" placeholder="Enter your name">
+                <button class="btn btn-primary" id="btnNext1">CONTINUE</button>
+            </div>
+
+            <div id="setup-step-2" class="hidden">
+                <input type="number" class="input-field" id="inputAge" placeholder="Your Age">
+                <div style="display:flex; gap:10px; margin-bottom:15px;">
+                    <!-- FIXED: Added explicit class for selection logic -->
+                    <button class="select-btn gender-btn" data-value="male">Male</button>
+                    <button class="select-btn gender-btn" data-value="female">Female</button>
+                </div>
+                <button class="btn btn-primary" id="btnNext2">CONTINUE</button>
+            </div>
+
+            <div id="setup-step-3" class="hidden">
+                <p style="margin-bottom:12px; color:white; font-weight:700;">Are you a parent?</p>
+                <div style="display:flex; gap:10px; margin-bottom:20px;">
+                    <!-- FIXED: Added explicit class for selection logic -->
+                    <button class="select-btn parent-btn" data-value="false">No</button>
+                    <button class="select-btn parent-btn" data-value="true">Yes</button>
+                </div>
+                <button class="btn btn-primary" id="btnFinishSetup">FINISH SETUP</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- VIEW: DASHBOARD -->
+    <div id="view-home" class="hidden fade-in">
+        <!-- Status Banner -->
+        <div class="status-banner" id="systemToggle">
+            <div class="status-content">
+                <div class="status-icon">🔥</div>
+                <div class="status-info">
+                    <h3>System Status</h3>
+                    <p id="statusSubtext">Protecting your mind</p>
+                </div>
+            </div>
+            <div class="status-pill" id="statusPill">ACTIVE</div>
+        </div>
+
+        <!-- Graveyard Card -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">The Graveyard</div>
+                <div style="font-size:1.2rem;">💀</div>
+            </div>
+            <div class="graveyard-grid" id="graveyardGrid"></div>
+            <div style="text-align: center; margin-top: 12px; font-size: 0.75rem; color: var(--text-muted);">
+                Last 28 Days
+            </div>
+        </div>
+
+        <!-- Profile Card -->
+        <div class="card" style="padding: 16px; display: flex; align-items: center; gap: 16px;">
+            <div style="font-size: 2rem;">👤</div>
+            <div>
+                <h3 id="display-name" style="margin: 0; font-size: 1.1rem; color: white;">User</h3>
+                <p id="display-details" style="margin: 0; font-size: 0.8rem; color: var(--text-muted);">Profile Details</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- VIEW: SETTINGS (LOCKED DOWN) -->
+    <div id="view-settings" class="hidden fade-in">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">System Configuration</div>
+            </div>
+            
+            <div style="padding: 10px; color: var(--text-muted); font-size: 0.9rem; line-height: 1.5;">
+                <p><strong>Hallucinations:</strong> <span style="color:var(--success)">ENABLED</span></p>
+                <p><strong>Child Voice:</strong> <span style="color:var(--success)">ENABLED</span></p>
+                <p><strong>Auditory Horror:</strong> <span style="color:var(--success)">ENABLED</span></p>
+                <hr style="border:0; border-top:1px solid var(--border); margin:15px 0;">
+                <p style="font-size:0.8rem; font-style:italic;">"You cannot turn off the truth. The settings are locked for your own good."</p>
+            </div>
+        </div>
+
+        <button class="btn btn-danger" id="btnReset">RESET IDENTITY</button>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

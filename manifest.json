@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "FOHKASU // 聚焦",
+  "version": "8.0",
+  "description": "Cognitive Firewall. The Final Update.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["style.css"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["audio/aria_math.mp3", "style.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
